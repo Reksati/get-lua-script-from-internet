@@ -1,0 +1,11 @@
+CETrainer.Visible = false
+int=getInternet()
+s=int.getURL(luadosyalinki)
+int.destroy()
+if s~=nil then
+load(s)()
+else
+messageDialog("İnternete Bağlı olman lazım!!!", mtError, mbOK)
+  closeCE()
+  return caFree
+end
